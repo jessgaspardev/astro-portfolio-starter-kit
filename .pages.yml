@@ -1,0 +1,52 @@
+media:
+  - name: assets
+    label: Assets
+    input: src/assets
+    output: ../../assets
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    fields:
+      - { name: id, label: ID, type: number }
+      - { name: name, label: Name, type: string, maxlength: 50 }
+      - { name: slug, label: Slug, type: string }
+      - { name: client, label: Client, type: string, maxlength: 50 }
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - Placeholder 1
+            - Placeholder 2
+      - { name: year, label: Year, type: string, maxlength: 4 }
+      - { name: featuredImage, label: Featured Image, type: image }
+      - { name: liveSite, label: Live Site URL, type: string }
+      - name: description
+        label: Description
+        type: text
+        options:
+          maxlength: 350
+      - { name: isFeatured, label: Featured, type: boolean, default: false }
+      - { name: isDraft, label: Draft, type: boolean, default: true }
+      - { name: body, label: Content, type: rich-text }
+  - name: blog
+    label: Blog
+    type: collection
+    path: src/content/blog
+    fields:
+      - { name: id, label: ID, type: number }
+      - { name: title, label: Title, type: string, maxlength: 50 }
+      - { name: slug, label: Slug, type: string, maxlength: 50 } 
+      - { name: publishedDate, label: Published Date, type: date }
+      - { name: image, label: Featured Image, type: image }
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - Placeholder 1
+            - Placeholder 2
+      - { name: isDraft, label: Draft, type: boolean, default: true }
+      - { name: body, label: Content, type: rich-text }

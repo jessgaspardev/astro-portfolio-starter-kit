@@ -17,6 +17,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "", // change to your domain
+  site: "https://jessgaspar.dev", // change to your domain
   integrations: [sitemap()]
 });
