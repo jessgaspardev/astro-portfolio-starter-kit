@@ -1,6 +1,17 @@
 ---
 // layout
 import Layout from "../../layout/Layout.astro"
+
+// routing
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async ({paginate}) => {
+    const projects = await getCollection("projects", ({data}) => !data.isDraft)
+    return paginate(projects, {pageSize: 6});
+}) satisfies GetStaticPaths;
+
+// props
+const { page } = Astro.props;
 ---
 
 <Layout
