@@ -1,6 +1,6 @@
-#  Astro Portfolio Themes Starter Kit
+#  Astro Portfolio Starter Kit
 
-A base template for creating portfolio Astro themes already set up with content collections for projects and blog, tailwind, components and PagesCMS integration.  
+A base template for creating a portfolio website with Astro already set up with content collections for projects and blog, tailwind, components and PagesCMS integration.  
 
 ## 🚀 Project Structure
 
